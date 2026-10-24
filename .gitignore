@@ -1,0 +1,11 @@
+# 本地垃圾/缓存
+99-junk/
+__pycache__/
+*.pyc
+
+# 设备镜像（体积过大，不随仓库分发）
+06-device-dumps/*.img
+
+# 系统杂项
+Thumbs.db
+.DS_Store

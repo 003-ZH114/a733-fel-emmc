@@ -1,0 +1,1413 @@
+
+fel.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+000571dc <work>:
+   571dc:	e92d4ff0 	push	{r4, r5, r6, r7, r8, r9, sl, fp, lr}
+   571e0:	e24ddf93 	sub	sp, sp, #588	@ 0x24c
+   571e4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   571e8:	e3a01000 	mov	r1, #0
+   571ec:	e3401205 	cmp	r0, #1342177280	@ 0x50000000
+   571f0:	e3a02000 	mov	r2, #0
+   571f4:	e5812018 	str	r2, [r1, #24]
+   571f8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   571fc:	e1a03002 	mov	r3, r2
+   57200:	e58120b8 	str	r2, [r1, #184]	@ 0xb8
+   57204:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   57208:	e5930114 	ldr	r0, [r3, #276]	@ 0x114
+   5720c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57210:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57214:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   57218:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5721c:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   57220:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57224:	e5832108 	str	r2, [r3, #264]	@ 0x108
+   57228:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5722c:	e3a01a5a 	mov	r1, #368640	@ 0x5a000
+   57230:	e583210c 	str	r2, [r3, #268]	@ 0x10c
+   57234:	e5917ff0 	ldr	r7, [r1, #4080]	@ 0xff0
+   57238:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5723c:	e5916ff4 	ldr	r6, [r1, #4084]	@ 0xff4
+   57240:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57244:	e5914ff8 	ldr	r4, [r1, #4088]	@ 0xff8
+   57248:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5724c:	e2479001 	sub	r9, r7, #1
+   57250:	e3590005 	cmp	r9, #5
+   57254:	8a00008a 	bhi	57484 <work+0x2a8>
+   57258:	e3570003 	cmp	r7, #3
+   5725c:	13570006 	cmpne	r7, #6
+   57260:	0a00000e 	beq	572a0 <work+0xc4>
+   57264:	e3540000 	cmp	r4, #0
+   57268:	0a000477 	beq	5844c <work+0x1270>
+   5726c:	e3540c02 	cmp	r4, #512	@ 0x200
+   57270:	8a00008b 	bhi	574a4 <work+0x2c8>
+   57274:	e30b3abe 	tst	fp, #778240	@ 0xbe000
+   57278:	e34c3afe 	cmp	ip, #1040384	@ 0xfe000
+   5727c:	e1500003 	cmp	r0, r3
+   57280:	1a0001e5 	bne	57a1c <work+0x840>
+   57284:	e59f3fb8 	ldr	r3, [pc, #4024]	@ 58244 <work+0x1068>
+   57288:	e3590004 	cmp	r9, #4
+   5728c:	8a00000c 	bhi	572c4 <work+0xe8>
+   57290:	e0833009 	add	r3, r3, r9
+   57294:	e19330b9 	ldrh	r3, [r3, r9]
+   57298:	e08ff103 	add	pc, pc, r3, lsl #2
+   5729c:	e320f000 	msr	CPSR_, #0
+   572a0:	e2473003 	sub	r3, r7, #3
+   572a4:	e30b2abe 	tst	fp, #778240	@ 0xbe000
+   572a8:	e34c2afe 	cmp	ip, #1040384	@ 0xfe000
+   572ac:	e16f3f13 	cmn	pc, r3, lsl pc	@ <UNPREDICTABLE>
+   572b0:	e1a032a3 	lsr	r3, r3, #5
+   572b4:	e1500002 	cmp	r0, r2
+   572b8:	13833001 	orrne	r3, r3, #1
+   572bc:	e3530000 	cmp	r3, #0
+   572c0:	1a0001d5 	bne	57a1c <work+0x840>
+   572c4:	e1a01404 	lsl	r1, r4, #8
+   572c8:	e28d3028 	add	r3, sp, #40	@ 0x28
+   572cc:	e1811806 	orr	r1, r1, r6, lsl #16
+   572d0:	e3a02d05 	mov	r2, #320	@ 0x140
+   572d4:	e3811403 	orr	r1, r1, #50331648	@ 0x3000000
+   572d8:	e3a00006 	mov	r0, #6
+   572dc:	ebffff4e 	bl	5701c <smhc_cmd>
+   572e0:	e3500000 	cmp	r0, #0
+   572e4:	1a000472 	bne	584b4 <work+0x12d8>
+   572e8:	e3043b40 	tst	r4, #64, 22	@ 0x10000
+   572ec:	e340304c 	cmp	r0, #76	@ 0x4c
+   572f0:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   572f4:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   572f8:	ea000001 	b	57304 <work+0x128>
+   572fc:	e2533001 	subs	r3, r3, #1
+   57300:	0a000003 	beq	57314 <work+0x138>
+   57304:	e591203c 	ldr	r2, [r1, #60]	@ 0x3c
+   57308:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5730c:	e3120c02 	tst	r2, #512	@ 0x200
+   57310:	1afffff9 	bne	572fc <work+0x120>
+   57314:	e28d3028 	add	r3, sp, #40	@ 0x28
+   57318:	e3a02d05 	mov	r2, #320	@ 0x140
+   5731c:	e3a01801 	mov	r1, #65536	@ 0x10000
+   57320:	e3a0000d 	mov	r0, #13
+   57324:	ebffff3c 	bl	5701c <smhc_cmd>
+   57328:	e3500000 	cmp	r0, #0
+   5732c:	0a00044e 	beq	5846c <work+0x1290>
+   57330:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57334:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57338:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   5733c:	e3e02000 	mvn	r2, #0
+   57340:	e5832038 	str	r2, [r3, #56]	@ 0x38
+   57344:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57348:	e3a02c02 	mov	r2, #512	@ 0x200
+   5734c:	e5832010 	str	r2, [r3, #16]
+   57350:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57354:	e5832014 	str	r2, [r3, #20]
+   57358:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5735c:	e3a02000 	mov	r2, #0
+   57360:	e583201c 	str	r2, [r3, #28]
+   57364:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57368:	e3082480 	tst	r8, #128, 8	@ 0x80000000
+   5736c:	e340201e 	cmp	r0, #30
+   57370:	e3a01fd2 	mov	r1, #840	@ 0x348
+   57374:	e3481000 	cmp	r8, #0
+   57378:	e5831018 	str	r1, [r3, #24]
+   5737c:	ea000001 	b	57388 <work+0x1ac>
+   57380:	e2522001 	subs	r2, r2, #1
+   57384:	0a000003 	beq	57398 <work+0x1bc>
+   57388:	e5931038 	ldr	r1, [r3, #56]	@ 0x38
+   5738c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57390:	e3110f82 	tst	r1, #520	@ 0x208
+   57394:	0afffff9 	beq	57380 <work+0x1a4>
+   57398:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   5739c:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   573a0:	e5913038 	ldr	r3, [r1, #56]	@ 0x38
+   573a4:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   573a8:	e3130008 	tst	r3, #8
+   573ac:	0a0004d3 	beq	58700 <work+0x1524>
+   573b0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   573b4:	e5912000 	ldr	r2, [r1]
+   573b8:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   573bc:	e3a00cb2 	mov	r0, #45568	@ 0xb200
+   573c0:	e3400005 	cmp	r0, #5
+   573c4:	e3822102 	orr	r2, r2, #-2147483648	@ 0x80000000
+   573c8:	e3a03a5b 	mov	r3, #372736	@ 0x5b000
+   573cc:	e5812000 	str	r2, [r1]
+   573d0:	e5912200 	ldr	r2, [r1, #512]	@ 0x200
+   573d4:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   573d8:	e4832004 	str	r2, [r3], #4
+   573dc:	e1530000 	cmp	r3, r0
+   573e0:	1afffffa 	bne	573d0 <work+0x1f4>
+   573e4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   573e8:	e5913000 	ldr	r3, [r1]
+   573ec:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   573f0:	e3a02000 	mov	r2, #0
+   573f4:	e3833002 	orr	r3, r3, #2
+   573f8:	e5813000 	str	r3, [r1]
+   573fc:	e58d2048 	str	r2, [sp, #72]	@ 0x48
+   57400:	e59d3048 	ldr	r3, [sp, #72]	@ 0x48
+   57404:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   57408:	2a000005 	bcs	57424 <work+0x248>
+   5740c:	e59d3048 	ldr	r3, [sp, #72]	@ 0x48
+   57410:	e2833001 	add	r3, r3, #1
+   57414:	e58d3048 	str	r3, [sp, #72]	@ 0x48
+   57418:	e59d3048 	ldr	r3, [sp, #72]	@ 0x48
+   5741c:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   57420:	3afffff9 	bcc	5740c <work+0x230>
+   57424:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57428:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   5742c:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   57430:	e5932000 	ldr	r2, [r3]
+   57434:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57438:	e2866a5b 	add	r6, r6, #372736	@ 0x5b000
+   5743c:	e3822102 	orr	r2, r2, #-2147483648	@ 0x80000000
+   57440:	e5832000 	str	r2, [r3]
+   57444:	e5d62000 	ldrb	r2, [r6]
+   57448:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5744c:	e3a03000 	mov	r3, #0
+   57450:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   57454:	e5832108 	str	r2, [r3, #264]	@ 0x108
+   57458:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5745c:	e1540002 	cmp	r4, r2
+   57460:	e583410c 	str	r4, [r3, #268]	@ 0x10c
+   57464:	0a0003c4 	beq	5837c <work+0x11a0>
+   57468:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5746c:	e3a020e8 	mov	r2, #232	@ 0xe8
+   57470:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   57474:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57478:	e3a020ee 	mov	r2, #238	@ 0xee
+   5747c:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   57480:	ea000005 	b	5749c <work+0x2c0>
+   57484:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57488:	e3a020e0 	mov	r2, #224	@ 0xe0
+   5748c:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   57490:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57494:	e3a020ee 	mov	r2, #238	@ 0xee
+   57498:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   5749c:	e28ddf93 	add	sp, sp, #588	@ 0x24c
+   574a0:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   574a4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   574a8:	e3a020e2 	mov	r2, #226	@ 0xe2
+   574ac:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   574b0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   574b4:	e3a020ee 	mov	r2, #238	@ 0xee
+   574b8:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   574bc:	eafffff6 	b	5749c <work+0x2c0>
+   574c0:	e3540000 	cmp	r4, #0
+   574c4:	03a04002 	moveq	r4, #2
+   574c8:	e3a03000 	mov	r3, #0
+   574cc:	e3a02d05 	mov	r2, #320	@ 0x140
+   574d0:	e3a01c03 	mov	r1, #768	@ 0x300
+   574d4:	e34013b3 	cmp	r0, #-872415230	@ 0xcc000002
+   574d8:	e3a00006 	mov	r0, #6
+   574dc:	ebfffece 	bl	5701c <smhc_cmd>
+   574e0:	e3500000 	cmp	r0, #0
+   574e4:	1a000416 	bne	58544 <work+0x1368>
+   574e8:	e58d001c 	str	r0, [sp, #28]
+   574ec:	e30826a0 	tst	r8, #160, 12	@ 0xa000000
+   574f0:	e3402001 	cmp	r0, #1
+   574f4:	e59d301c 	ldr	r3, [sp, #28]
+   574f8:	e1530002 	cmp	r3, r2
+   574fc:	2a000005 	bcs	57518 <work+0x33c>
+   57500:	e59d301c 	ldr	r3, [sp, #28]
+   57504:	e2833001 	add	r3, r3, #1
+   57508:	e58d301c 	str	r3, [sp, #28]
+   5750c:	e59d301c 	ldr	r3, [sp, #28]
+   57510:	e1530002 	cmp	r3, r2
+   57514:	3afffff9 	bcc	57500 <work+0x324>
+   57518:	e3a02cb2 	mov	r2, #45568	@ 0xb200
+   5751c:	e3402005 	cmp	r0, #5
+   57520:	e3a03a5b 	mov	r3, #372736	@ 0x5b000
+   57524:	e3a01000 	mov	r1, #0
+   57528:	e4c31001 	strb	r1, [r3], #1
+   5752c:	e1530002 	cmp	r3, r2
+   57530:	1afffffc 	bne	57528 <work+0x34c>
+   57534:	e3a03cb1 	mov	r3, #45312	@ 0xb100
+   57538:	e3403005 	cmp	r0, #5
+   5753c:	e1a01426 	lsr	r1, r6, #8
+   57540:	e1a02424 	lsr	r2, r4, #8
+   57544:	e3a00017 	mov	r0, #23
+   57548:	e5c310f8 	strb	r1, [r3, #248]	@ 0xf8
+   5754c:	e3a01106 	mov	r1, #-2147483647	@ 0x80000001
+   57550:	e5c320fe 	strb	r2, [r3, #254]	@ 0xfe
+   57554:	e3a02d05 	mov	r2, #320	@ 0x140
+   57558:	e5c360f9 	strb	r6, [r3, #249]	@ 0xf9
+   5755c:	e5c340ff 	strb	r4, [r3, #255]	@ 0xff
+   57560:	e3a03000 	mov	r3, #0
+   57564:	ebfffeac 	bl	5701c <smhc_cmd>
+   57568:	e3500000 	cmp	r0, #0
+   5756c:	1a0003e5 	bne	58508 <work+0x132c>
+   57570:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57574:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57578:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   5757c:	e3e02000 	mvn	r2, #0
+   57580:	e5832038 	str	r2, [r3, #56]	@ 0x38
+   57584:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57588:	e5932000 	ldr	r2, [r3]
+   5758c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57590:	e3822102 	orr	r2, r2, #-2147483648	@ 0x80000000
+   57594:	e5832000 	str	r2, [r3]
+   57598:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5759c:	e3a02c02 	mov	r2, #512	@ 0x200
+   575a0:	e5832010 	str	r2, [r3, #16]
+   575a4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   575a8:	e5832014 	str	r2, [r3, #20]
+   575ac:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   575b0:	e583001c 	str	r0, [r3, #28]
+   575b4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   575b8:	e30a2120 	tst	sl, #32, 2
+   575bc:	e3402007 	cmp	r0, #7
+   575c0:	e3021759 	tst	r2, #23330816	@ 0x1640000
+   575c4:	e3481000 	cmp	r8, #0
+   575c8:	e5831018 	str	r1, [r3, #24]
+   575cc:	ea000001 	b	575d8 <work+0x3fc>
+   575d0:	e2522001 	subs	r2, r2, #1
+   575d4:	0a000003 	beq	575e8 <work+0x40c>
+   575d8:	e5931038 	ldr	r1, [r3, #56]	@ 0x38
+   575dc:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   575e0:	e3110004 	tst	r1, #4
+   575e4:	0afffff9 	beq	575d0 <work+0x3f4>
+   575e8:	e3a00a02 	mov	r0, #8192	@ 0x2000
+   575ec:	e3400402 	cmp	r0, #33554432	@ 0x2000000
+   575f0:	e3a01cb2 	mov	r1, #45568	@ 0xb200
+   575f4:	e3401005 	cmp	r0, #5
+   575f8:	e3a03a5b 	mov	r3, #372736	@ 0x5b000
+   575fc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57600:	e4932004 	ldr	r2, [r3], #4
+   57604:	e5802200 	str	r2, [r0, #512]	@ 0x200
+   57608:	e1530001 	cmp	r3, r1
+   5760c:	1afffffa 	bne	575fc <work+0x420>
+   57610:	e3083480 	tst	r8, #128, 8	@ 0x80000000
+   57614:	e340301e 	cmp	r0, #30
+   57618:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   5761c:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57620:	ea000001 	b	5762c <work+0x450>
+   57624:	e2533001 	subs	r3, r3, #1
+   57628:	0a000003 	beq	5763c <work+0x460>
+   5762c:	e5912038 	ldr	r2, [r1, #56]	@ 0x38
+   57630:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57634:	e3120f82 	tst	r2, #520	@ 0x208
+   57638:	0afffff9 	beq	57624 <work+0x448>
+   5763c:	e3a02a02 	mov	r2, #8192	@ 0x2000
+   57640:	e3402402 	cmp	r0, #33554432	@ 0x2000000
+   57644:	e5923038 	ldr	r3, [r2, #56]	@ 0x38
+   57648:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5764c:	e2133c02 	ands	r3, r3, #512	@ 0x200
+   57650:	1a00043f 	bne	58754 <work+0x1578>
+   57654:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57658:	e5921000 	ldr	r1, [r2]
+   5765c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57660:	e3811002 	orr	r1, r1, #2
+   57664:	e5821000 	str	r1, [r2]
+   57668:	e58d3020 	str	r3, [sp, #32]
+   5766c:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57670:	e59d3020 	ldr	r3, [sp, #32]
+   57674:	e1530002 	cmp	r3, r2
+   57678:	8a000005 	bhi	57694 <work+0x4b8>
+   5767c:	e59d3020 	ldr	r3, [sp, #32]
+   57680:	e2833001 	add	r3, r3, #1
+   57684:	e58d3020 	str	r3, [sp, #32]
+   57688:	e59d3020 	ldr	r3, [sp, #32]
+   5768c:	e1530002 	cmp	r3, r2
+   57690:	9afffff9 	bls	5767c <work+0x4a0>
+   57694:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57698:	e3a04a02 	mov	r4, #8192	@ 0x2000
+   5769c:	e3404402 	cmp	r0, #33554432	@ 0x2000000
+   576a0:	e5941000 	ldr	r1, [r4]
+   576a4:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   576a8:	e3a03000 	mov	r3, #0
+   576ac:	e3811102 	orr	r1, r1, #-2147483648	@ 0x80000000
+   576b0:	e3a02d05 	mov	r2, #320	@ 0x140
+   576b4:	e5841000 	str	r1, [r4]
+   576b8:	e3a00017 	mov	r0, #23
+   576bc:	e3a01001 	mov	r1, #1
+   576c0:	ebfffe55 	bl	5701c <smhc_cmd>
+   576c4:	e3500000 	cmp	r0, #0
+   576c8:	1a000432 	bne	58798 <work+0x15bc>
+   576cc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   576d0:	e3e03000 	mvn	r3, #0
+   576d4:	e5843038 	str	r3, [r4, #56]	@ 0x38
+   576d8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   576dc:	e5943000 	ldr	r3, [r4]
+   576e0:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   576e4:	e3833102 	orr	r3, r3, #-2147483648	@ 0x80000000
+   576e8:	e5843000 	str	r3, [r4]
+   576ec:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   576f0:	e3a03c02 	mov	r3, #512	@ 0x200
+   576f4:	e5843010 	str	r3, [r4, #16]
+   576f8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   576fc:	e5843014 	str	r3, [r4, #20]
+   57700:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57704:	e584001c 	str	r0, [r4, #28]
+   57708:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5770c:	e3083480 	tst	r8, #128, 8	@ 0x80000000
+   57710:	e340301e 	cmp	r0, #30
+   57714:	e3022352 	tst	r2, #1207959553	@ 0x48000001
+   57718:	e3482000 	cmp	r8, #0
+   5771c:	e5842018 	str	r2, [r4, #24]
+   57720:	ea000001 	b	5772c <work+0x550>
+   57724:	e2533001 	subs	r3, r3, #1
+   57728:	0a000003 	beq	5773c <work+0x560>
+   5772c:	e5942038 	ldr	r2, [r4, #56]	@ 0x38
+   57730:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57734:	e3120f82 	tst	r2, #520	@ 0x208
+   57738:	0afffff9 	beq	57724 <work+0x548>
+   5773c:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57740:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57744:	e5913038 	ldr	r3, [r1, #56]	@ 0x38
+   57748:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5774c:	e2133008 	ands	r3, r3, #8
+   57750:	0a0003f1 	beq	5871c <work+0x1540>
+   57754:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57758:	e5912000 	ldr	r2, [r1]
+   5775c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57760:	e3a00cb2 	mov	r0, #45568	@ 0xb200
+   57764:	e3400005 	cmp	r0, #5
+   57768:	e3822102 	orr	r2, r2, #-2147483648	@ 0x80000000
+   5776c:	e3a03a5b 	mov	r3, #372736	@ 0x5b000
+   57770:	e5812000 	str	r2, [r1]
+   57774:	e5912200 	ldr	r2, [r1, #512]	@ 0x200
+   57778:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5777c:	e4832004 	str	r2, [r3], #4
+   57780:	e1530000 	cmp	r3, r0
+   57784:	1afffffa 	bne	57774 <work+0x598>
+   57788:	e3a02cb1 	mov	r2, #45312	@ 0xb100
+   5778c:	e3402005 	cmp	r0, #5
+   57790:	e5d230f5 	ldrb	r3, [r2, #245]	@ 0xf5
+   57794:	e5d2c0f4 	ldrb	ip, [r2, #244]	@ 0xf4
+   57798:	e5d200f7 	ldrb	r0, [r2, #247]	@ 0xf7
+   5779c:	e5d210f6 	ldrb	r1, [r2, #246]	@ 0xf6
+   577a0:	e1a03803 	lsl	r3, r3, #16
+   577a4:	e1833c0c 	orr	r3, r3, ip, lsl #24
+   577a8:	e1833000 	orr	r3, r3, r0
+   577ac:	e1833401 	orr	r3, r3, r1, lsl #8
+   577b0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   577b4:	e3a01000 	mov	r1, #0
+   577b8:	e3401709 	cmp	r0, #2359296	@ 0x240000
+   577bc:	e5813108 	str	r3, [r1, #264]	@ 0x108
+   577c0:	e5d230fc 	ldrb	r3, [r2, #252]	@ 0xfc
+   577c4:	e5d220fd 	ldrb	r2, [r2, #253]	@ 0xfd
+   577c8:	e1822403 	orr	r2, r2, r3, lsl #8
+   577cc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   577d0:	e3a03000 	mov	r3, #0
+   577d4:	e581210c 	str	r2, [r1, #268]	@ 0x10c
+   577d8:	e1a01003 	mov	r1, r3
+   577dc:	e3a02d05 	mov	r2, #320	@ 0x140
+   577e0:	e34013b3 	cmp	r0, #-872415230	@ 0xcc000002
+   577e4:	e3a00006 	mov	r0, #6
+   577e8:	ebfffe0b 	bl	5701c <smhc_cmd>
+   577ec:	e3a03000 	mov	r3, #0
+   577f0:	e58d3028 	str	r3, [sp, #40]	@ 0x28
+   577f4:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   577f8:	e3403001 	cmp	r0, #1
+   577fc:	e59d2028 	ldr	r2, [sp, #40]	@ 0x28
+   57800:	e1520003 	cmp	r2, r3
+   57804:	2a000005 	bcs	57820 <work+0x644>
+   57808:	e59d2028 	ldr	r2, [sp, #40]	@ 0x28
+   5780c:	e2822001 	add	r2, r2, #1
+   57810:	e58d2028 	str	r2, [sp, #40]	@ 0x28
+   57814:	e59d2028 	ldr	r2, [sp, #40]	@ 0x28
+   57818:	e1520003 	cmp	r2, r3
+   5781c:	3afffff9 	bcc	57808 <work+0x62c>
+   57820:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57824:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57828:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   5782c:	e5932000 	ldr	r2, [r3]
+   57830:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57834:	e3a01000 	mov	r1, #0
+   57838:	e3822002 	orr	r2, r2, #2
+   5783c:	e5832000 	str	r2, [r3]
+   57840:	e58d1024 	str	r1, [sp, #36]	@ 0x24
+   57844:	e59d3024 	ldr	r3, [sp, #36]	@ 0x24
+   57848:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   5784c:	2a000005 	bcs	57868 <work+0x68c>
+   57850:	e59d3024 	ldr	r3, [sp, #36]	@ 0x24
+   57854:	e2833001 	add	r3, r3, #1
+   57858:	e58d3024 	str	r3, [sp, #36]	@ 0x24
+   5785c:	e59d3024 	ldr	r3, [sp, #36]	@ 0x24
+   57860:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   57864:	3afffff9 	bcc	57850 <work+0x674>
+   57868:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5786c:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57870:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   57874:	e5932000 	ldr	r2, [r3]
+   57878:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5787c:	e3822102 	orr	r2, r2, #-2147483648	@ 0x80000000
+   57880:	e5832000 	str	r2, [r3]
+   57884:	ea0002bc 	b	5837c <work+0x11a0>
+   57888:	e3a03a5a 	mov	r3, #368640	@ 0x5a000
+   5788c:	e5933ffc 	ldr	r3, [r3, #4092]	@ 0xffc
+   57890:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57894:	e3530000 	cmp	r3, #0
+   57898:	e3a02d05 	mov	r2, #320	@ 0x140
+   5789c:	11a03403 	lslne	r3, r3, #8
+   578a0:	e3a00006 	mov	r0, #6
+   578a4:	12037b3e 	andne	r7, r3, #63488	@ 0xf800
+   578a8:	13a01c01 	movne	r1, #256	@ 0x100
+   578ac:	134013b3 	cmpne	r0, #-872415230	@ 0xcc000002
+   578b0:	03a01c49 	moveq	r1, #18688	@ 0x4900
+   578b4:	11871001 	orrne	r1, r7, r1
+   578b8:	034013b3 	cmpeq	r0, #-872415230	@ 0xcc000002
+   578bc:	e3a03000 	mov	r3, #0
+   578c0:	03a07b12 	moveq	r7, #18432	@ 0x4800
+   578c4:	ebfffdd4 	bl	5701c <smhc_cmd>
+   578c8:	e3500000 	cmp	r0, #0
+   578cc:	1a000325 	bne	58568 <work+0x138c>
+   578d0:	e58d0014 	str	r0, [sp, #20]
+   578d4:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   578d8:	e59d3014 	ldr	r3, [sp, #20]
+   578dc:	e1530002 	cmp	r3, r2
+   578e0:	8a000005 	bhi	578fc <work+0x720>
+   578e4:	e59d3014 	ldr	r3, [sp, #20]
+   578e8:	e2833001 	add	r3, r3, #1
+   578ec:	e58d3014 	str	r3, [sp, #20]
+   578f0:	e59d3014 	ldr	r3, [sp, #20]
+   578f4:	e1530002 	cmp	r3, r2
+   578f8:	9afffff9 	bls	578e4 <work+0x708>
+   578fc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57900:	e3a0a000 	mov	sl, #0
+   57904:	e340a709 	cmp	r0, #2359296	@ 0x240000
+   57908:	e3540000 	cmp	r4, #0
+   5790c:	e3a02010 	mov	r2, #16
+   57910:	13a08a5b 	movne	r8, #372736	@ 0x5b000
+   57914:	e58a2100 	str	r2, [sl, #256]	@ 0x100
+   57918:	13a05000 	movne	r5, #0
+   5791c:	1a000022 	bne	579ac <work+0x7d0>
+   57920:	e387163b 	orr	r1, r7, #61865984	@ 0x3b00000
+   57924:	e3a03000 	mov	r3, #0
+   57928:	e3a02d05 	mov	r2, #320	@ 0x140
+   5792c:	e3811803 	orr	r1, r1, #196608	@ 0x30000
+   57930:	e3a00006 	mov	r0, #6
+   57934:	ebfffdb8 	bl	5701c <smhc_cmd>
+   57938:	e3a03000 	mov	r3, #0
+   5793c:	e58d3018 	str	r3, [sp, #24]
+   57940:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57944:	e59d3018 	ldr	r3, [sp, #24]
+   57948:	e1530002 	cmp	r3, r2
+   5794c:	8a000005 	bhi	57968 <work+0x78c>
+   57950:	e59d3018 	ldr	r3, [sp, #24]
+   57954:	e2833001 	add	r3, r3, #1
+   57958:	e58d3018 	str	r3, [sp, #24]
+   5795c:	e59d3018 	ldr	r3, [sp, #24]
+   57960:	e1530002 	cmp	r3, r2
+   57964:	9afffff9 	bls	57950 <work+0x774>
+   57968:	e3a03a5b 	mov	r3, #372736	@ 0x5b000
+   5796c:	e5932000 	ldr	r2, [r3]
+   57970:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57974:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57978:	e3a03000 	mov	r3, #0
+   5797c:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   57980:	e5832108 	str	r2, [r3, #264]	@ 0x108
+   57984:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57988:	e3a020aa 	mov	r2, #170	@ 0xaa
+   5798c:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   57990:	eafffec1 	b	5749c <work+0x2c0>
+   57994:	e2855001 	add	r5, r5, #1
+   57998:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5799c:	e2888c02 	add	r8, r8, #512	@ 0x200
+   579a0:	e1550004 	cmp	r5, r4
+   579a4:	e58a5104 	str	r5, [sl, #260]	@ 0x104
+   579a8:	0affffdc 	beq	57920 <work+0x744>
+   579ac:	e0869005 	add	r9, r6, r5
+   579b0:	e1a01008 	mov	r1, r8
+   579b4:	e1a00009 	mov	r0, r9
+   579b8:	ebfffdcc 	bl	570f0 <read_sector>
+   579bc:	e3500000 	cmp	r0, #0
+   579c0:	0afffff3 	beq	57994 <work+0x7b8>
+   579c4:	e387163b 	orr	r1, r7, #61865984	@ 0x3b00000
+   579c8:	e1a04000 	mov	r4, r0
+   579cc:	e3811803 	orr	r1, r1, #196608	@ 0x30000
+   579d0:	e3a03000 	mov	r3, #0
+   579d4:	e3a02d05 	mov	r2, #320	@ 0x140
+   579d8:	e3a00006 	mov	r0, #6
+   579dc:	ebfffd8e 	bl	5701c <smhc_cmd>
+   579e0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   579e4:	e3a02000 	mov	r2, #0
+   579e8:	e3402709 	cmp	r0, #2359296	@ 0x240000
+   579ec:	e2640000 	rsb	r0, r4, #0
+   579f0:	e5829108 	str	r9, [r2, #264]	@ 0x108
+   579f4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   579f8:	e205300f 	and	r3, r5, #15
+   579fc:	e582010c 	str	r0, [r2, #268]	@ 0x10c
+   57a00:	e28330d0 	add	r3, r3, #208	@ 0xd0
+   57a04:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a08:	e5823104 	str	r3, [r2, #260]	@ 0x104
+   57a0c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a10:	e3a030ee 	mov	r3, #238	@ 0xee
+   57a14:	e5823100 	str	r3, [r2, #256]	@ 0x100
+   57a18:	eafffe9f 	b	5749c <work+0x2c0>
+   57a1c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a20:	e3a03402 	mov	r3, #33554432	@ 0x2000000
+   57a24:	e30f2f33 	tst	pc, #51, 30	@ 0xcc
+   57a28:	e34f233f 	cmp	pc, #-67108864	@ 0xfc000000
+   57a2c:	e5832180 	str	r2, [r3, #384]	@ 0x180
+   57a30:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a34:	e3032333 	tst	r3, #-872415232	@ 0xcc000000
+   57a38:	e343233f 	cmp	r3, #-67108864	@ 0xfc000000
+   57a3c:	e5832184 	str	r2, [r3, #388]	@ 0x184
+   57a40:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a44:	e3a02003 	mov	r2, #3
+   57a48:	e5832188 	str	r2, [r3, #392]	@ 0x188
+   57a4c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a50:	e3012111 	tst	r1, #1073741828	@ 0x40000004
+   57a54:	e3412111 	cmp	r1, #1073741828	@ 0x40000004
+   57a58:	e58321a0 	str	r2, [r3, #416]	@ 0x1a0
+   57a5c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a60:	e58321a4 	str	r2, [r3, #420]	@ 0x1a4
+   57a64:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a68:	e58321a8 	str	r2, [r3, #424]	@ 0x1a8
+   57a6c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a70:	e3052946 	tst	r5, #1146880	@ 0x118000
+   57a74:	e3452455 	cmp	r5, #1426063360	@ 0x55000000
+   57a78:	e58321b0 	str	r2, [r3, #432]	@ 0x1b0
+   57a7c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a80:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57a84:	e3403200 	cmp	r0, #0, 4
+   57a88:	e3a02102 	mov	r2, #-2147483648	@ 0x80000000
+   57a8c:	e5832d20 	str	r2, [r3, #3360]	@ 0xd20
+   57a90:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57a94:	e5932d2c 	ldr	r2, [r3, #3372]	@ 0xd2c
+   57a98:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57a9c:	e3c22801 	bic	r2, r2, #65536	@ 0x10000
+   57aa0:	e5832d2c 	str	r2, [r3, #3372]	@ 0xd2c
+   57aa4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57aa8:	e5932d2c 	ldr	r2, [r3, #3372]	@ 0xd2c
+   57aac:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57ab0:	e3c22001 	bic	r2, r2, #1
+   57ab4:	e5832d2c 	str	r2, [r3, #3372]	@ 0xd2c
+   57ab8:	e3a03000 	mov	r3, #0
+   57abc:	e58d3040 	str	r3, [sp, #64]	@ 0x40
+   57ac0:	e59d3040 	ldr	r3, [sp, #64]	@ 0x40
+   57ac4:	e3530063 	cmp	r3, #99	@ 0x63
+   57ac8:	8a000005 	bhi	57ae4 <work+0x908>
+   57acc:	e59d3040 	ldr	r3, [sp, #64]	@ 0x40
+   57ad0:	e2833001 	add	r3, r3, #1
+   57ad4:	e58d3040 	str	r3, [sp, #64]	@ 0x40
+   57ad8:	e59d3040 	ldr	r3, [sp, #64]	@ 0x40
+   57adc:	e3530063 	cmp	r3, #99	@ 0x63
+   57ae0:	9afffff9 	bls	57acc <work+0x8f0>
+   57ae4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57ae8:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57aec:	e3403200 	cmp	r0, #0, 4
+   57af0:	e5932d2c 	ldr	r2, [r3, #3372]	@ 0xd2c
+   57af4:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57af8:	e3822001 	orr	r2, r2, #1
+   57afc:	e5832d2c 	str	r2, [r3, #3372]	@ 0xd2c
+   57b00:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57b04:	e5932d2c 	ldr	r2, [r3, #3372]	@ 0xd2c
+   57b08:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57b0c:	e3822801 	orr	r2, r2, #65536	@ 0x10000
+   57b10:	e5832d2c 	str	r2, [r3, #3372]	@ 0xd2c
+   57b14:	e3a03000 	mov	r3, #0
+   57b18:	e58d3044 	str	r3, [sp, #68]	@ 0x44
+   57b1c:	e59d3044 	ldr	r3, [sp, #68]	@ 0x44
+   57b20:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   57b24:	2a000005 	bcs	57b40 <work+0x964>
+   57b28:	e59d3044 	ldr	r3, [sp, #68]	@ 0x44
+   57b2c:	e2833001 	add	r3, r3, #1
+   57b30:	e58d3044 	str	r3, [sp, #68]	@ 0x44
+   57b34:	e59d3044 	ldr	r3, [sp, #68]	@ 0x44
+   57b38:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   57b3c:	3afffff9 	bcc	57b28 <work+0x94c>
+   57b40:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57b44:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57b48:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57b4c:	e3a03007 	mov	r3, #7
+   57b50:	e5813000 	str	r3, [r1]
+   57b54:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57b58:	e3403001 	cmp	r0, #1
+   57b5c:	ea000001 	b	57b68 <work+0x98c>
+   57b60:	e2533001 	subs	r3, r3, #1
+   57b64:	0a000003 	beq	57b78 <work+0x99c>
+   57b68:	e5912000 	ldr	r2, [r1]
+   57b6c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57b70:	e3120007 	tst	r2, #7
+   57b74:	1afffff9 	bne	57b60 <work+0x984>
+   57b78:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57b7c:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57b80:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57b84:	e3a03000 	mov	r3, #0
+   57b88:	e581300c 	str	r3, [r1, #12]
+   57b8c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57b90:	e3a03003 	mov	r3, #3
+   57b94:	e5813054 	str	r3, [r1, #84]	@ 0x54
+   57b98:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57b9c:	e3003deb 	tst	r0, #15040	@ 0x3ac0
+   57ba0:	e5813050 	str	r3, [r1, #80]	@ 0x50
+   57ba4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57ba8:	e3a03005 	mov	r3, #5
+   57bac:	e3403200 	cmp	r0, #0, 4
+   57bb0:	e5813100 	str	r3, [r1, #256]	@ 0x100
+   57bb4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57bb8:	e3a03080 	mov	r3, #128	@ 0x80
+   57bbc:	e5813144 	str	r3, [r1, #324]	@ 0x144
+   57bc0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57bc4:	e3a03176 	mov	r3, #-2147483619	@ 0x8000001d
+   57bc8:	e5813004 	str	r3, [r1, #4]
+   57bcc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57bd0:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57bd4:	e3403001 	cmp	r0, #1
+   57bd8:	e3a02000 	mov	r2, #0
+   57bdc:	e3482020 	cmp	r8, #32
+   57be0:	e5812018 	str	r2, [r1, #24]
+   57be4:	ea000001 	b	57bf0 <work+0xa14>
+   57be8:	e2533001 	subs	r3, r3, #1
+   57bec:	0a0002e7 	beq	58790 <work+0x15b4>
+   57bf0:	e5912018 	ldr	r2, [r1, #24]
+   57bf4:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57bf8:	e3520000 	cmp	r2, #0
+   57bfc:	bafffff9 	blt	57be8 <work+0xa0c>
+   57c00:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57c04:	e3a0301d 	mov	r3, #29
+   57c08:	e3483001 	cmp	r8, #1
+   57c0c:	e5813004 	str	r3, [r1, #4]
+   57c10:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57c14:	e3a03000 	mov	r3, #0
+   57c18:	e3483020 	cmp	r8, #32
+   57c1c:	e5813018 	str	r3, [r1, #24]
+   57c20:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57c24:	e3403001 	cmp	r0, #1
+   57c28:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57c2c:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57c30:	ea000001 	b	57c3c <work+0xa60>
+   57c34:	e2533001 	subs	r3, r3, #1
+   57c38:	0a0002d4 	beq	58790 <work+0x15b4>
+   57c3c:	e5912018 	ldr	r2, [r1, #24]
+   57c40:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57c44:	e3520000 	cmp	r2, #0
+   57c48:	bafffff9 	blt	57c34 <work+0xa58>
+   57c4c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57c50:	e5913004 	ldr	r3, [r1, #4]
+   57c54:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57c58:	e3c33102 	bic	r3, r3, #-2147483648	@ 0x80000000
+   57c5c:	e5813004 	str	r3, [r1, #4]
+   57c60:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57c64:	e3a03000 	mov	r3, #0
+   57c68:	e3483020 	cmp	r8, #32
+   57c6c:	e5813018 	str	r3, [r1, #24]
+   57c70:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57c74:	e3403001 	cmp	r0, #1
+   57c78:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57c7c:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57c80:	ea000001 	b	57c8c <work+0xab0>
+   57c84:	e2533001 	subs	r3, r3, #1
+   57c88:	0a0002c0 	beq	58790 <work+0x15b4>
+   57c8c:	e5912018 	ldr	r2, [r1, #24]
+   57c90:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57c94:	e3520000 	cmp	r2, #0
+   57c98:	bafffff9 	blt	57c84 <work+0xaa8>
+   57c9c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57ca0:	e3e03000 	mvn	r3, #0
+   57ca4:	e5813008 	str	r3, [r1, #8]
+   57ca8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57cac:	e3a03000 	mov	r3, #0
+   57cb0:	e5813030 	str	r3, [r1, #48]	@ 0x30
+   57cb4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57cb8:	e5813078 	str	r3, [r1, #120]	@ 0x78
+   57cbc:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57cc0:	e58d3038 	str	r3, [sp, #56]	@ 0x38
+   57cc4:	e59d3038 	ldr	r3, [sp, #56]	@ 0x38
+   57cc8:	e1530002 	cmp	r3, r2
+   57ccc:	8a000005 	bhi	57ce8 <work+0xb0c>
+   57cd0:	e59d3038 	ldr	r3, [sp, #56]	@ 0x38
+   57cd4:	e2833001 	add	r3, r3, #1
+   57cd8:	e58d3038 	str	r3, [sp, #56]	@ 0x38
+   57cdc:	e59d3038 	ldr	r3, [sp, #56]	@ 0x38
+   57ce0:	e1530002 	cmp	r3, r2
+   57ce4:	9afffff9 	bls	57cd0 <work+0xaf4>
+   57ce8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57cec:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   57cf0:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   57cf4:	e3a02001 	mov	r2, #1
+   57cf8:	e5832078 	str	r2, [r3, #120]	@ 0x78
+   57cfc:	e3a03000 	mov	r3, #0
+   57d00:	e58d303c 	str	r3, [sp, #60]	@ 0x3c
+   57d04:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57d08:	e59d303c 	ldr	r3, [sp, #60]	@ 0x3c
+   57d0c:	e1530002 	cmp	r3, r2
+   57d10:	8a000005 	bhi	57d2c <work+0xb50>
+   57d14:	e59d303c 	ldr	r3, [sp, #60]	@ 0x3c
+   57d18:	e2833001 	add	r3, r3, #1
+   57d1c:	e58d303c 	str	r3, [sp, #60]	@ 0x3c
+   57d20:	e59d303c 	ldr	r3, [sp, #60]	@ 0x3c
+   57d24:	e1530002 	cmp	r3, r2
+   57d28:	9afffff9 	bls	57d14 <work+0xb38>
+   57d2c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57d30:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57d34:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57d38:	e3a03902 	mov	r3, #32768	@ 0x8000
+   57d3c:	e3483000 	cmp	r8, #0
+   57d40:	e5813018 	str	r3, [r1, #24]
+   57d44:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57d48:	e3403001 	cmp	r0, #1
+   57d4c:	ea000001 	b	57d58 <work+0xb7c>
+   57d50:	e2533001 	subs	r3, r3, #1
+   57d54:	0a000003 	beq	57d68 <work+0xb8c>
+   57d58:	e5912018 	ldr	r2, [r1, #24]
+   57d5c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57d60:	e3520000 	cmp	r2, #0
+   57d64:	bafffff9 	blt	57d50 <work+0xb74>
+   57d68:	e3a03000 	mov	r3, #0
+   57d6c:	e58d3034 	str	r3, [sp, #52]	@ 0x34
+   57d70:	e59d3034 	ldr	r3, [sp, #52]	@ 0x34
+   57d74:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57d78:	e1530002 	cmp	r3, r2
+   57d7c:	8a000005 	bhi	57d98 <work+0xbbc>
+   57d80:	e59d3034 	ldr	r3, [sp, #52]	@ 0x34
+   57d84:	e2833001 	add	r3, r3, #1
+   57d88:	e58d3034 	str	r3, [sp, #52]	@ 0x34
+   57d8c:	e59d3034 	ldr	r3, [sp, #52]	@ 0x34
+   57d90:	e1530002 	cmp	r3, r2
+   57d94:	9afffff9 	bls	57d80 <work+0xba4>
+   57d98:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57d9c:	e3a02000 	mov	r2, #0
+   57da0:	e3402709 	cmp	r0, #2359296	@ 0x240000
+   57da4:	e308a080 	tst	r8, #128	@ 0x80
+   57da8:	e344a0ff 	cmp	r4, #255	@ 0xff
+   57dac:	e28d5048 	add	r5, sp, #72	@ 0x48
+   57db0:	e3a08000 	mov	r8, #0
+   57db4:	e3a03000 	mov	r3, #0
+   57db8:	e3a01001 	mov	r1, #1
+   57dbc:	e1a00003 	mov	r0, r3
+   57dc0:	e5821100 	str	r1, [r2, #256]	@ 0x100
+   57dc4:	e1a01003 	mov	r1, r3
+   57dc8:	e3a02902 	mov	r2, #32768	@ 0x8000
+   57dcc:	ebfffc92 	bl	5701c <smhc_cmd>
+   57dd0:	e1a03005 	mov	r3, r5
+   57dd4:	e1a0100a 	mov	r1, sl
+   57dd8:	e3a02040 	mov	r2, #64	@ 0x40
+   57ddc:	e3a00001 	mov	r0, #1
+   57de0:	ebfffc8d 	bl	5701c <smhc_cmd>
+   57de4:	e3500000 	cmp	r0, #0
+   57de8:	1a000002 	bne	57df8 <work+0xc1c>
+   57dec:	e59d3048 	ldr	r3, [sp, #72]	@ 0x48
+   57df0:	e3530000 	cmp	r3, #0
+   57df4:	ba00001a 	blt	57e64 <work+0xc88>
+   57df8:	e3a03000 	mov	r3, #0
+   57dfc:	e58d3030 	str	r3, [sp, #48]	@ 0x30
+   57e00:	e59d3030 	ldr	r3, [sp, #48]	@ 0x30
+   57e04:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57e08:	e1530002 	cmp	r3, r2
+   57e0c:	8a000005 	bhi	57e28 <work+0xc4c>
+   57e10:	e59d3030 	ldr	r3, [sp, #48]	@ 0x30
+   57e14:	e2833001 	add	r3, r3, #1
+   57e18:	e58d3030 	str	r3, [sp, #48]	@ 0x30
+   57e1c:	e59d3030 	ldr	r3, [sp, #48]	@ 0x30
+   57e20:	e1530002 	cmp	r3, r2
+   57e24:	9afffff9 	bls	57e10 <work+0xc34>
+   57e28:	e2888001 	add	r8, r8, #1
+   57e2c:	e3580ffa 	cmp	r8, #1000	@ 0x3e8
+   57e30:	1affffe6 	bne	57dd0 <work+0xbf4>
+   57e34:	e3a02002 	mov	r2, #2
+   57e38:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57e3c:	e3a03000 	mov	r3, #0
+   57e40:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   57e44:	e5832108 	str	r2, [r3, #264]	@ 0x108
+   57e48:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57e4c:	e3a020f0 	mov	r2, #240	@ 0xf0
+   57e50:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   57e54:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57e58:	e3a020ee 	mov	r2, #238	@ 0xee
+   57e5c:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   57e60:	eafffd8d 	b	5749c <work+0x2c0>
+   57e64:	e3a08a02 	mov	r8, #8192	@ 0x2000
+   57e68:	e3408402 	cmp	r0, #33554432	@ 0x2000000
+   57e6c:	e1a03000 	mov	r3, r0
+   57e70:	e1a01000 	mov	r1, r0
+   57e74:	e58d000c 	str	r0, [sp, #12]
+   57e78:	e3a02d07 	mov	r2, #448	@ 0x1c0
+   57e7c:	e3a00002 	mov	r0, #2
+   57e80:	ebfffc65 	bl	5701c <smhc_cmd>
+   57e84:	e5983020 	ldr	r3, [r8, #32]
+   57e88:	e1a0b003 	mov	fp, r3
+   57e8c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57e90:	e598a024 	ldr	sl, [r8, #36]	@ 0x24
+   57e94:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57e98:	e5983028 	ldr	r3, [r8, #40]	@ 0x28
+   57e9c:	e58d3004 	str	r3, [sp, #4]
+   57ea0:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57ea4:	e598302c 	ldr	r3, [r8, #44]	@ 0x2c
+   57ea8:	e58d3008 	str	r3, [sp, #8]
+   57eac:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57eb0:	e3a02d05 	mov	r2, #320	@ 0x140
+   57eb4:	e59d300c 	ldr	r3, [sp, #12]
+   57eb8:	e3a01801 	mov	r1, #65536	@ 0x10000
+   57ebc:	e3a00003 	mov	r0, #3
+   57ec0:	ebfffc55 	bl	5701c <smhc_cmd>
+   57ec4:	e59d300c 	ldr	r3, [sp, #12]
+   57ec8:	e3a02d05 	mov	r2, #320	@ 0x140
+   57ecc:	e3a01801 	mov	r1, #65536	@ 0x10000
+   57ed0:	e3a00007 	mov	r0, #7
+   57ed4:	ebfffc50 	bl	5701c <smhc_cmd>
+   57ed8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57edc:	e3a02000 	mov	r2, #0
+   57ee0:	e3402709 	cmp	r0, #2359296	@ 0x240000
+   57ee4:	e59d300c 	ldr	r3, [sp, #12]
+   57ee8:	e3a01002 	mov	r1, #2
+   57eec:	e3a00006 	mov	r0, #6
+   57ef0:	e5821100 	str	r1, [r2, #256]	@ 0x100
+   57ef4:	e3a02d05 	mov	r2, #320	@ 0x140
+   57ef8:	e3a01000 	mov	r1, #0
+   57efc:	e34013b7 	cmp	r0, #-603979774	@ 0xdc000002
+   57f00:	ebfffc45 	bl	5701c <smhc_cmd>
+   57f04:	e30a3120 	tst	sl, #32, 2
+   57f08:	e3403007 	cmp	r0, #7
+   57f0c:	ea000001 	b	57f18 <work+0xd3c>
+   57f10:	e2533001 	subs	r3, r3, #1
+   57f14:	0a000003 	beq	57f28 <work+0xd4c>
+   57f18:	e598203c 	ldr	r2, [r8, #60]	@ 0x3c
+   57f1c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57f20:	e3120c02 	tst	r2, #512	@ 0x200
+   57f24:	1afffff9 	bne	57f10 <work+0xd34>
+   57f28:	e3a03000 	mov	r3, #0
+   57f2c:	e58d302c 	str	r3, [sp, #44]	@ 0x2c
+   57f30:	e59d302c 	ldr	r3, [sp, #44]	@ 0x2c
+   57f34:	e302270f 	tst	r2, #3932160	@ 0x3c0000
+   57f38:	e1530002 	cmp	r3, r2
+   57f3c:	8a000005 	bhi	57f58 <work+0xd7c>
+   57f40:	e59d302c 	ldr	r3, [sp, #44]	@ 0x2c
+   57f44:	e2833001 	add	r3, r3, #1
+   57f48:	e58d302c 	str	r3, [sp, #44]	@ 0x2c
+   57f4c:	e59d302c 	ldr	r3, [sp, #44]	@ 0x2c
+   57f50:	e1530002 	cmp	r3, r2
+   57f54:	9afffff9 	bls	57f40 <work+0xd64>
+   57f58:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57f5c:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57f60:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57f64:	e3a03102 	mov	r3, #-2147483648	@ 0x80000000
+   57f68:	e5813004 	str	r3, [r1, #4]
+   57f6c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57f70:	e3a03000 	mov	r3, #0
+   57f74:	e3483020 	cmp	r8, #32
+   57f78:	e5813018 	str	r3, [r1, #24]
+   57f7c:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57f80:	e3403001 	cmp	r0, #1
+   57f84:	ea000001 	b	57f90 <work+0xdb4>
+   57f88:	e2533001 	subs	r3, r3, #1
+   57f8c:	0a000051 	beq	580d8 <work+0xefc>
+   57f90:	e5912018 	ldr	r2, [r1, #24]
+   57f94:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57f98:	e3520000 	cmp	r2, #0
+   57f9c:	bafffff9 	blt	57f88 <work+0xdac>
+   57fa0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57fa4:	e3a03102 	mov	r3, #-2147483648	@ 0x80000000
+   57fa8:	e5813004 	str	r3, [r1, #4]
+   57fac:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57fb0:	e3a03000 	mov	r3, #0
+   57fb4:	e3483020 	cmp	r8, #32
+   57fb8:	e5813018 	str	r3, [r1, #24]
+   57fbc:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   57fc0:	e3403001 	cmp	r0, #1
+   57fc4:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   57fc8:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   57fcc:	ea000001 	b	57fd8 <work+0xdfc>
+   57fd0:	e2533001 	subs	r3, r3, #1
+   57fd4:	0a00003f 	beq	580d8 <work+0xefc>
+   57fd8:	e5912018 	ldr	r2, [r1, #24]
+   57fdc:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   57fe0:	e3520000 	cmp	r2, #0
+   57fe4:	bafffff9 	blt	57fd0 <work+0xdf4>
+   57fe8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57fec:	e3a03000 	mov	r3, #0
+   57ff0:	e3483001 	cmp	r8, #1
+   57ff4:	e5813004 	str	r3, [r1, #4]
+   57ff8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   57ffc:	e3a03000 	mov	r3, #0
+   58000:	e3483020 	cmp	r8, #32
+   58004:	e30826a0 	tst	r8, #160, 12	@ 0xa000000
+   58008:	e3402001 	cmp	r0, #1
+   5800c:	e5813018 	str	r3, [r1, #24]
+   58010:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   58014:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   58018:	ea000001 	b	58024 <work+0xe48>
+   5801c:	e2522001 	subs	r2, r2, #1
+   58020:	0a00002c 	beq	580d8 <work+0xefc>
+   58024:	e5931018 	ldr	r1, [r3, #24]
+   58028:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5802c:	e3510000 	cmp	r1, #0
+   58030:	bafffff9 	blt	5801c <work+0xe40>
+   58034:	e5932144 	ldr	r2, [r3, #324]	@ 0x144
+   58038:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5803c:	e3c2203f 	bic	r2, r2, #63	@ 0x3f
+   58040:	e3822080 	orr	r2, r2, #128	@ 0x80
+   58044:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58048:	e5832144 	str	r2, [r3, #324]	@ 0x144
+   5804c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58050:	e5932004 	ldr	r2, [r3, #4]
+   58054:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58058:	e3c22102 	bic	r2, r2, #-2147483648	@ 0x80000000
+   5805c:	e5832004 	str	r2, [r3, #4]
+   58060:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58064:	e3a02000 	mov	r2, #0
+   58068:	e3482020 	cmp	r8, #32
+   5806c:	e5832018 	str	r2, [r3, #24]
+   58070:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   58074:	e3403001 	cmp	r0, #1
+   58078:	e3a02a02 	mov	r2, #8192	@ 0x2000
+   5807c:	e3402402 	cmp	r0, #33554432	@ 0x2000000
+   58080:	ea000001 	b	5808c <work+0xeb0>
+   58084:	e2533001 	subs	r3, r3, #1
+   58088:	0a000012 	beq	580d8 <work+0xefc>
+   5808c:	e5921018 	ldr	r1, [r2, #24]
+   58090:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58094:	e3510000 	cmp	r1, #0
+   58098:	bafffff9 	blt	58084 <work+0xea8>
+   5809c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   580a0:	e3a03000 	mov	r3, #0
+   580a4:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   580a8:	e30b2abe 	tst	fp, #778240	@ 0xbe000
+   580ac:	e34c2afe 	cmp	ip, #1040384	@ 0xfe000
+   580b0:	e3570003 	cmp	r7, #3
+   580b4:	e5832114 	str	r2, [r3, #276]	@ 0x114
+   580b8:	0a000133 	beq	5858c <work+0x13b0>
+   580bc:	e59f3184 	ldr	r3, [pc, #388]	@ 58248 <work+0x106c>
+   580c0:	e3590004 	cmp	r9, #4
+   580c4:	8afffc7e 	bhi	572c4 <work+0xe8>
+   580c8:	e0833009 	add	r3, r3, r9
+   580cc:	e19330f9 	ldrsh	r3, [r3, r9]
+   580d0:	e08ff103 	add	pc, pc, r3, lsl #2
+   580d4:	e320f000 	msr	CPSR_, #0
+   580d8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   580dc:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   580e0:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   580e4:	e3a03000 	mov	r3, #0
+   580e8:	e581300c 	str	r3, [r1, #12]
+   580ec:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   580f0:	e3a0301d 	mov	r3, #29
+   580f4:	e5813004 	str	r3, [r1, #4]
+   580f8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   580fc:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   58100:	e3403001 	cmp	r0, #1
+   58104:	e3a02000 	mov	r2, #0
+   58108:	e3482020 	cmp	r8, #32
+   5810c:	e5812018 	str	r2, [r1, #24]
+   58110:	ea000001 	b	5811c <work+0xf40>
+   58114:	e2533001 	subs	r3, r3, #1
+   58118:	0a000003 	beq	5812c <work+0xf50>
+   5811c:	e5912018 	ldr	r2, [r1, #24]
+   58120:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58124:	e3520000 	cmp	r2, #0
+   58128:	bafffff9 	blt	58114 <work+0xf38>
+   5812c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58130:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   58134:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   58138:	e5913004 	ldr	r3, [r1, #4]
+   5813c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58140:	e3833801 	orr	r3, r3, #65536	@ 0x10000
+   58144:	e5813004 	str	r3, [r1, #4]
+   58148:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5814c:	e30836a0 	tst	r8, #160, 12	@ 0xa000000
+   58150:	e3403001 	cmp	r0, #1
+   58154:	e3a02000 	mov	r2, #0
+   58158:	e3482020 	cmp	r8, #32
+   5815c:	e5812018 	str	r2, [r1, #24]
+   58160:	ea000001 	b	5816c <work+0xf90>
+   58164:	e2533001 	subs	r3, r3, #1
+   58168:	0affffcb 	beq	5809c <work+0xec0>
+   5816c:	e5912018 	ldr	r2, [r1, #24]
+   58170:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58174:	e3520000 	cmp	r2, #0
+   58178:	bafffff9 	blt	58164 <work+0xf88>
+   5817c:	eaffffc6 	b	5809c <work+0xec0>
+   58180:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58184:	e3a03000 	mov	r3, #0
+   58188:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   5818c:	e3a02020 	mov	r2, #32
+   58190:	e3540000 	cmp	r4, #0
+   58194:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58198:	0a000068 	beq	58340 <work+0x1164>
+   5819c:	e3a0ccb2 	mov	ip, #45568	@ 0xb200
+   581a0:	e340c005 	cmp	r0, #5
+   581a4:	e3a0e000 	mov	lr, #0
+   581a8:	e340e709 	cmp	r0, #2359296	@ 0x240000
+   581ac:	e1a0000e 	mov	r0, lr
+   581b0:	e3a01a02 	mov	r1, #8192	@ 0x2000
+   581b4:	e3401402 	cmp	r0, #33554432	@ 0x2000000
+   581b8:	e3008758 	tst	r0, #88, 14	@ 0x1600000
+   581bc:	e3488000 	cmp	r8, #0
+   581c0:	e1a0e00c 	mov	lr, ip
+   581c4:	e3a02000 	mov	r2, #0
+   581c8:	e3e09000 	mvn	r9, #0
+   581cc:	e3a07c02 	mov	r7, #512	@ 0x200
+   581d0:	e3a0a031 	mov	sl, #49	@ 0x31
+   581d4:	e0865002 	add	r5, r6, r2
+   581d8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   581dc:	e3a03030 	mov	r3, #48	@ 0x30
+   581e0:	e5803110 	str	r3, [r0, #272]	@ 0x110
+   581e4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   581e8:	e5819038 	str	r9, [r1, #56]	@ 0x38
+   581ec:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   581f0:	e5817010 	str	r7, [r1, #16]
+   581f4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   581f8:	e5817014 	str	r7, [r1, #20]
+   581fc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58200:	e5913000 	ldr	r3, [r1]
+   58204:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58208:	e3833102 	orr	r3, r3, #-2147483648	@ 0x80000000
+   5820c:	e5813000 	str	r3, [r1]
+   58210:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58214:	e581501c 	str	r5, [r1, #28]
+   58218:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5821c:	e5818018 	str	r8, [r1, #24]
+   58220:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58224:	e1a0b008 	mov	fp, r8
+   58228:	e580a110 	str	sl, [r0, #272]	@ 0x110
+   5822c:	e1a08000 	mov	r8, r0
+   58230:	e24ecc02 	sub	ip, lr, #512	@ 0x200
+   58234:	e1a00001 	mov	r0, r1
+   58238:	e30a3120 	tst	sl, #32, 2
+   5823c:	e3403007 	cmp	r0, #7
+   58240:	ea000003 	b	58254 <work+0x1078>
+   58244:	000587d4 	.word	0x000587d4
+   58248:	000587de 	.word	0x000587de
+   5824c:	e2533001 	subs	r3, r3, #1
+   58250:	0a00006d 	beq	5840c <work+0x1230>
+   58254:	e590103c 	ldr	r1, [r0, #60]	@ 0x3c
+   58258:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5825c:	e3110008 	tst	r1, #8
+   58260:	1afffff9 	bne	5824c <work+0x1070>
+   58264:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58268:	e49c3004 	ldr	r3, [ip], #4
+   5826c:	e5803200 	str	r3, [r0, #512]	@ 0x200
+   58270:	e15c000e 	cmp	ip, lr
+   58274:	1affffef 	bne	58238 <work+0x105c>
+   58278:	e1a01000 	mov	r1, r0
+   5827c:	e1a00008 	mov	r0, r8
+   58280:	e1a0800b 	mov	r8, fp
+   58284:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58288:	e3a03032 	mov	r3, #50	@ 0x32
+   5828c:	e5803110 	str	r3, [r0, #272]	@ 0x110
+   58290:	e30a3120 	tst	sl, #32, 2
+   58294:	e3403007 	cmp	r0, #7
+   58298:	ea000001 	b	582a4 <work+0x10c8>
+   5829c:	e2533001 	subs	r3, r3, #1
+   582a0:	0a000003 	beq	582b4 <work+0x10d8>
+   582a4:	e591c038 	ldr	ip, [r1, #56]	@ 0x38
+   582a8:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   582ac:	e31c0004 	tst	ip, #4
+   582b0:	0afffff9 	beq	5829c <work+0x10c0>
+   582b4:	e3083480 	tst	r8, #128, 8	@ 0x80000000
+   582b8:	e340301e 	cmp	r0, #30
+   582bc:	ea000001 	b	582c8 <work+0x10ec>
+   582c0:	e2533001 	subs	r3, r3, #1
+   582c4:	0a000003 	beq	582d8 <work+0x10fc>
+   582c8:	e591c038 	ldr	ip, [r1, #56]	@ 0x38
+   582cc:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   582d0:	e31c0008 	tst	ip, #8
+   582d4:	0afffff9 	beq	582c0 <work+0x10e4>
+   582d8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   582dc:	e3a03033 	mov	r3, #51	@ 0x33
+   582e0:	e5803110 	str	r3, [r0, #272]	@ 0x110
+   582e4:	e3043b40 	tst	r4, #64, 22	@ 0x10000
+   582e8:	e340304c 	cmp	r0, #76	@ 0x4c
+   582ec:	ea000001 	b	582f8 <work+0x111c>
+   582f0:	e2533001 	subs	r3, r3, #1
+   582f4:	0a000003 	beq	58308 <work+0x112c>
+   582f8:	e591c03c 	ldr	ip, [r1, #60]	@ 0x3c
+   582fc:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58300:	e31c0c02 	tst	ip, #512	@ 0x200
+   58304:	1afffff9 	bne	582f0 <work+0x1114>
+   58308:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5830c:	e5913038 	ldr	r3, [r1, #56]	@ 0x38
+   58310:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58314:	e5813038 	str	r3, [r1, #56]	@ 0x38
+   58318:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5831c:	e3a03034 	mov	r3, #52	@ 0x34
+   58320:	e2822001 	add	r2, r2, #1
+   58324:	e5803110 	str	r3, [r0, #272]	@ 0x110
+   58328:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5832c:	e28eec02 	add	lr, lr, #512	@ 0x200
+   58330:	e1520004 	cmp	r2, r4
+   58334:	e5802104 	str	r2, [r0, #260]	@ 0x104
+   58338:	1affffa5 	bne	581d4 <work+0xff8>
+   5833c:	e28d5048 	add	r5, sp, #72	@ 0x48
+   58340:	e1a01005 	mov	r1, r5
+   58344:	e1a00006 	mov	r0, r6
+   58348:	ebfffb68 	bl	570f0 <read_sector>
+   5834c:	e3500000 	cmp	r0, #0
+   58350:	1a000009 	bne	5837c <work+0x11a0>
+   58354:	e59d1048 	ldr	r1, [sp, #72]	@ 0x48
+   58358:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5835c:	e3a03000 	mov	r3, #0
+   58360:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   58364:	e3a02a5b 	mov	r2, #372736	@ 0x5b000
+   58368:	e5831108 	str	r1, [r3, #264]	@ 0x108
+   5836c:	e5922000 	ldr	r2, [r2]
+   58370:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58374:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58378:	e583210c 	str	r2, [r3, #268]	@ 0x10c
+   5837c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58380:	e3a03000 	mov	r3, #0
+   58384:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   58388:	e3a020aa 	mov	r2, #170	@ 0xaa
+   5838c:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58390:	eafffc41 	b	5749c <work+0x2c0>
+   58394:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58398:	e3a03000 	mov	r3, #0
+   5839c:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   583a0:	e3a02010 	mov	r2, #16
+   583a4:	e3540000 	cmp	r4, #0
+   583a8:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   583ac:	0afffd6d 	beq	57968 <work+0x78c>
+   583b0:	e3a09000 	mov	r9, #0
+   583b4:	e3409709 	cmp	r0, #2359296	@ 0x240000
+   583b8:	e3a07a5b 	mov	r7, #372736	@ 0x5b000
+   583bc:	e3a05000 	mov	r5, #0
+   583c0:	ea000005 	b	583dc <work+0x1200>
+   583c4:	e2855001 	add	r5, r5, #1
+   583c8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   583cc:	e2877c02 	add	r7, r7, #512	@ 0x200
+   583d0:	e1550004 	cmp	r5, r4
+   583d4:	e5895104 	str	r5, [r9, #260]	@ 0x104
+   583d8:	0afffd62 	beq	57968 <work+0x78c>
+   583dc:	e0868005 	add	r8, r6, r5
+   583e0:	e1a01007 	mov	r1, r7
+   583e4:	e1a00008 	mov	r0, r8
+   583e8:	ebfffb40 	bl	570f0 <read_sector>
+   583ec:	e3500000 	cmp	r0, #0
+   583f0:	0afffff3 	beq	583c4 <work+0x11e8>
+   583f4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   583f8:	e3a02000 	mov	r2, #0
+   583fc:	e3402709 	cmp	r0, #2359296	@ 0x240000
+   58400:	e2600000 	rsb	r0, r0, #0
+   58404:	e5828108 	str	r8, [r2, #264]	@ 0x108
+   58408:	eafffd79 	b	579f4 <work+0x818>
+   5840c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58410:	e3a01000 	mov	r1, #0
+   58414:	e3401709 	cmp	r0, #2359296	@ 0x240000
+   58418:	e5815108 	str	r5, [r1, #264]	@ 0x108
+   5841c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58420:	e202300f 	and	r3, r2, #15
+   58424:	e3a02002 	mov	r2, #2
+   58428:	e28330c0 	add	r3, r3, #192	@ 0xc0
+   5842c:	e581210c 	str	r2, [r1, #268]	@ 0x10c
+   58430:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58434:	e5813104 	str	r3, [r1, #260]	@ 0x104
+   58438:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5843c:	e3a030ee 	mov	r3, #238	@ 0xee
+   58440:	e5813100 	str	r3, [r1, #256]	@ 0x100
+   58444:	e28ddf93 	add	sp, sp, #588	@ 0x24c
+   58448:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   5844c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58450:	e3a020e1 	mov	r2, #225	@ 0xe1
+   58454:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   58458:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5845c:	e3a020ee 	mov	r2, #238	@ 0xee
+   58460:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58464:	e28ddf93 	add	sp, sp, #588	@ 0x24c
+   58468:	e8bd8ff0 	pop	{r4, r5, r6, r7, r8, r9, sl, fp, pc}
+   5846c:	e59d3028 	ldr	r3, [sp, #40]	@ 0x28
+   58470:	e3130080 	tst	r3, #128	@ 0x80
+   58474:	0afffbad 	beq	57330 <work+0x154>
+   58478:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5847c:	e3a03000 	mov	r3, #0
+   58480:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   58484:	e30b2ad6 	tst	fp, #876544	@ 0xd6000
+   58488:	e5832108 	str	r2, [r3, #264]	@ 0x108
+   5848c:	e59d2028 	ldr	r2, [sp, #40]	@ 0x28
+   58490:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58494:	e583210c 	str	r2, [r3, #268]	@ 0x10c
+   58498:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5849c:	e3a020e7 	mov	r2, #231	@ 0xe7
+   584a0:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   584a4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   584a8:	e3a020ee 	mov	r2, #238	@ 0xee
+   584ac:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   584b0:	eafffbf9 	b	5749c <work+0x2c0>
+   584b4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   584b8:	e3a03000 	mov	r3, #0
+   584bc:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   584c0:	e3a020e6 	mov	r2, #230	@ 0xe6
+   584c4:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   584c8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   584cc:	e3a020ee 	mov	r2, #238	@ 0xee
+   584d0:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   584d4:	eafffbf0 	b	5749c <work+0x2c0>
+   584d8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   584dc:	e3a03000 	mov	r3, #0
+   584e0:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   584e4:	e3a02020 	mov	r2, #32
+   584e8:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   584ec:	eaffff2a 	b	5819c <work+0xfc0>
+   584f0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   584f4:	e3a03000 	mov	r3, #0
+   584f8:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   584fc:	e3a02010 	mov	r2, #16
+   58500:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58504:	eaffffa9 	b	583b0 <work+0x11d4>
+   58508:	e3a03000 	mov	r3, #0
+   5850c:	e1a01003 	mov	r1, r3
+   58510:	e34013b3 	cmp	r0, #-872415230	@ 0xcc000002
+   58514:	e3a02d05 	mov	r2, #320	@ 0x140
+   58518:	e3a00006 	mov	r0, #6
+   5851c:	ebfffabe 	bl	5701c <smhc_cmd>
+   58520:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58524:	e3a03000 	mov	r3, #0
+   58528:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   5852c:	e3a020a1 	mov	r2, #161	@ 0xa1
+   58530:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   58534:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58538:	e3a020ee 	mov	r2, #238	@ 0xee
+   5853c:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58540:	eafffbd5 	b	5749c <work+0x2c0>
+   58544:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58548:	e3a03000 	mov	r3, #0
+   5854c:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   58550:	e3a020b3 	mov	r2, #179	@ 0xb3
+   58554:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   58558:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5855c:	e3a020ee 	mov	r2, #238	@ 0xee
+   58560:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58564:	eafffbcc 	b	5749c <work+0x2c0>
+   58568:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5856c:	e3a03000 	mov	r3, #0
+   58570:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   58574:	e3a020b0 	mov	r2, #176	@ 0xb0
+   58578:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   5857c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58580:	e3a020ee 	mov	r2, #238	@ 0xee
+   58584:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58588:	eafffbc3 	b	5749c <work+0x2c0>
+   5858c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58590:	e583b108 	str	fp, [r3, #264]	@ 0x108
+   58594:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58598:	e583a10c 	str	sl, [r3, #268]	@ 0x10c
+   5859c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585a0:	e3a03a5b 	mov	r3, #372736	@ 0x5b000
+   585a4:	e583b000 	str	fp, [r3]
+   585a8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585ac:	e583a004 	str	sl, [r3, #4]
+   585b0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585b4:	e59d2004 	ldr	r2, [sp, #4]
+   585b8:	e5832008 	str	r2, [r3, #8]
+   585bc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585c0:	e59d2008 	ldr	r2, [sp, #8]
+   585c4:	e583200c 	str	r2, [r3, #12]
+   585c8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585cc:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   585d0:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   585d4:	e3e02000 	mvn	r2, #0
+   585d8:	e5832038 	str	r2, [r3, #56]	@ 0x38
+   585dc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585e0:	e3a02c02 	mov	r2, #512	@ 0x200
+   585e4:	e5832010 	str	r2, [r3, #16]
+   585e8:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585ec:	e5832014 	str	r2, [r3, #20]
+   585f0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   585f4:	e3a02000 	mov	r2, #0
+   585f8:	e583201c 	str	r2, [r3, #28]
+   585fc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58600:	e3082480 	tst	r8, #128, 8	@ 0x80000000
+   58604:	e340201e 	cmp	r0, #30
+   58608:	e3021348 	tst	r2, #72, 6	@ 0x20000001
+   5860c:	e3481000 	cmp	r8, #0
+   58610:	e5831018 	str	r1, [r3, #24]
+   58614:	ea000001 	b	58620 <work+0x1444>
+   58618:	e2522001 	subs	r2, r2, #1
+   5861c:	0a000003 	beq	58630 <work+0x1454>
+   58620:	e5931038 	ldr	r1, [r3, #56]	@ 0x38
+   58624:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58628:	e3110f82 	tst	r1, #520	@ 0x208
+   5862c:	0afffff9 	beq	58618 <work+0x143c>
+   58630:	e3a02a02 	mov	r2, #8192	@ 0x2000
+   58634:	e3402402 	cmp	r0, #33554432	@ 0x2000000
+   58638:	e5923038 	ldr	r3, [r2, #56]	@ 0x38
+   5863c:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58640:	e3130008 	tst	r3, #8
+   58644:	0a000024 	beq	586dc <work+0x1500>
+   58648:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   5864c:	e5921000 	ldr	r1, [r2]
+   58650:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58654:	e30b3010 	tst	fp, #16
+   58658:	e3403005 	cmp	r0, #5
+   5865c:	e30b0210 	tst	fp, #16, 4
+   58660:	e3400005 	cmp	r0, #5
+   58664:	e3811102 	orr	r1, r1, #-2147483648	@ 0x80000000
+   58668:	e5821000 	str	r1, [r2]
+   5866c:	e5921200 	ldr	r1, [r2, #512]	@ 0x200
+   58670:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   58674:	e4831004 	str	r1, [r3], #4
+   58678:	e1530000 	cmp	r3, r0
+   5867c:	1afffffa 	bne	5866c <work+0x1490>
+   58680:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58684:	e5923000 	ldr	r3, [r2]
+   58688:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   5868c:	e3a01000 	mov	r1, #0
+   58690:	e3833002 	orr	r3, r3, #2
+   58694:	e5823000 	str	r3, [r2]
+   58698:	e58d1010 	str	r1, [sp, #16]
+   5869c:	e59d3010 	ldr	r3, [sp, #16]
+   586a0:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   586a4:	2a000005 	bcs	586c0 <work+0x14e4>
+   586a8:	e59d3010 	ldr	r3, [sp, #16]
+   586ac:	e2833001 	add	r3, r3, #1
+   586b0:	e58d3010 	str	r3, [sp, #16]
+   586b4:	e59d3010 	ldr	r3, [sp, #16]
+   586b8:	e3530ffa 	cmp	r3, #1000	@ 0x3e8
+   586bc:	3afffff9 	bcc	586a8 <work+0x14cc>
+   586c0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   586c4:	e3a03a02 	mov	r3, #8192	@ 0x2000
+   586c8:	e3403402 	cmp	r0, #33554432	@ 0x2000000
+   586cc:	e5932000 	ldr	r2, [r3]
+   586d0:	f57ff05f 			@ <UNDEFINED> instruction: 0xf57ff05f
+   586d4:	e3822102 	orr	r2, r2, #-2147483648	@ 0x80000000
+   586d8:	e5832000 	str	r2, [r3]
+   586dc:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   586e0:	e3a03000 	mov	r3, #0
+   586e4:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   586e8:	e3a02001 	mov	r2, #1
+   586ec:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   586f0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   586f4:	e3a020aa 	mov	r2, #170	@ 0xaa
+   586f8:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   586fc:	eafffb66 	b	5749c <work+0x2c0>
+   58700:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58704:	e3a03000 	mov	r3, #0
+   58708:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   5870c:	e5836108 	str	r6, [r3, #264]	@ 0x108
+   58710:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58714:	e583410c 	str	r4, [r3, #268]	@ 0x10c
+   58718:	eaffff17 	b	5837c <work+0x11a0>
+   5871c:	e3a02d05 	mov	r2, #320	@ 0x140
+   58720:	e3a01000 	mov	r1, #0
+   58724:	e34013b3 	cmp	r0, #-872415230	@ 0xcc000002
+   58728:	e3a00006 	mov	r0, #6
+   5872c:	ebfffa3a 	bl	5701c <smhc_cmd>
+   58730:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58734:	e3a03000 	mov	r3, #0
+   58738:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   5873c:	e3a020a4 	mov	r2, #164	@ 0xa4
+   58740:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   58744:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58748:	e3a020ee 	mov	r2, #238	@ 0xee
+   5874c:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   58750:	eafffb51 	b	5749c <work+0x2c0>
+   58754:	e3a03000 	mov	r3, #0
+   58758:	e1a01003 	mov	r1, r3
+   5875c:	e34013b3 	cmp	r0, #-872415230	@ 0xcc000002
+   58760:	e3a02d05 	mov	r2, #320	@ 0x140
+   58764:	e3a00006 	mov	r0, #6
+   58768:	ebfffa2b 	bl	5701c <smhc_cmd>
+   5876c:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58770:	e3a03000 	mov	r3, #0
+   58774:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   58778:	e3a020a2 	mov	r2, #162	@ 0xa2
+   5877c:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   58780:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   58784:	e3a020ee 	mov	r2, #238	@ 0xee
+   58788:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   5878c:	eafffb42 	b	5749c <work+0x2c0>
+   58790:	e3a02001 	mov	r2, #1
+   58794:	eafffda7 	b	57e38 <work+0xc5c>
+   58798:	e3a03000 	mov	r3, #0
+   5879c:	e1a01003 	mov	r1, r3
+   587a0:	e34013b3 	cmp	r0, #-872415230	@ 0xcc000002
+   587a4:	e3a02d05 	mov	r2, #320	@ 0x140
+   587a8:	e3a00006 	mov	r0, #6
+   587ac:	ebfffa1a 	bl	5701c <smhc_cmd>
+   587b0:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   587b4:	e3a03000 	mov	r3, #0
+   587b8:	e3403709 	cmp	r0, #2359296	@ 0x240000
+   587bc:	e3a020a3 	mov	r2, #163	@ 0xa3
+   587c0:	e5832104 	str	r2, [r3, #260]	@ 0x104
+   587c4:	f57ff04f 			@ <UNDEFINED> instruction: 0xf57ff04f
+   587c8:	e3a020ee 	mov	r2, #238	@ 0xee
+   587cc:	e5832100 	str	r2, [r3, #256]	@ 0x100
+   587d0:	eafffb31 	b	5749c <work+0x2c0>

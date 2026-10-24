@@ -1,0 +1,10 @@
+ENTRY(main)
+SECTIONS
+{
+  . = 0x57000;
+  .text : { *(.start) *(.text*) }
+  .rodata : { *(.rodata*) }
+  .data : { *(.data*) }
+  .bss : { *(.bss*) *(COMMON) }
+  /DISCARD/ : { *(.comment) *(.ARM.attributes) }
+}
